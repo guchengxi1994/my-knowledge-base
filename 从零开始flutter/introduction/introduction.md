@@ -18,6 +18,26 @@
 
 ​		尽管Delphi很多时候都很便利，但是由于当时web应用开发兴起的时候没有选择激流勇进，导致Delphi已经快被时代抛弃了。
 
+​		感受一下Pascal语法的特色吧：
+
+```pascal
+// 循环
+while (条件) do
+begin
+	循环体;
+end;
+
+// if 语句 ,下一次看到then关键字还是在shell脚本里
+if(条件) then
+begin
+	语句;
+end;
+
+...
+```
+
+
+
 ## 1.2 Qt与PyQt[^2]
 
 ​		Qt 是一个1991年由Qt Company开发的跨平台开发框架。Qt是面向对象的框架，使用特殊的代码生成扩展（称为元对象编译器(Meta Object Compiler, moc)）以及一些宏，Qt很容易扩展，并且允许真正地组件编程。
@@ -26,7 +46,7 @@
 
 ## 1.3 基于JavaScript+原生的跨平台技术
 
-
+​		[React Native](https://github.com/facebook/react-native)可以用来搭建android和iOS应用；[electron](https://github.com/electron/electron)可以用来搭建桌面版应用。
 
 # 2. dart与flutter
 
