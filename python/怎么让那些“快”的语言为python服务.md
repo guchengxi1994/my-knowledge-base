@@ -175,5 +175,5 @@ print(ctypes.string_at(res))
 
 ## 总结
 
-python 牛逼。
+[**点击查看完整代码**](../pkgs/go2py_sm/readme.md)
 
