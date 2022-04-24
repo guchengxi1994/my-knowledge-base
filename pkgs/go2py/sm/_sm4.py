@@ -11,7 +11,7 @@ import ctypes
 import os
 from ctypes import c_char_p, cdll
 
-from _base import Base
+from ._base import Base
 
 
 class SM4(Base):
@@ -32,7 +32,7 @@ class SM4(Base):
     def __init__(self,
                  key: str,
                  sm4Type: str = "cbc",
-                 libPath: str = "go_codes/sm4.dll") -> None:
+                 libPath: str = "sm/go_codes/sm4.dll") -> None:
         assert len(key) == 16, "key error"
         if not os.path.exists(libPath):
             raise Exception("lib file not found")

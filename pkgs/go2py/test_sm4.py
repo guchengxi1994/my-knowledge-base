@@ -8,7 +8,7 @@ LastEditors: xiaoshuyui
 LastEditTime: 2022-04-23 09:20:05
 '''
 
-from _sm4 import SM4
+from sm import SM4
 
 sm = SM4("qwertyasdfgh1234")
 
