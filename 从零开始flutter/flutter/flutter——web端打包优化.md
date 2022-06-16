@@ -5,6 +5,8 @@
 * [大前端时代的乱流：带你了解最全面的 Flutter Web](https://zhuanlan.zhihu.com/p/511181734)
 
 * [github 案例](https://github.com/CarGuo/gsy_flutter_demo)
+  
+* [美团FlutterWeb性能优化探索与实践](https://juejin.cn/post/7043700931480780831)
 
 ### 简介
 
