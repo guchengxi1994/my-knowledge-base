@@ -1,5 +1,7 @@
 ## flutter web端打包优化方案
 
+文档版本:0.0.1
+
 ### 参考
 
 * [大前端时代的乱流：带你了解最全面的 Flutter Web](https://zhuanlan.zhihu.com/p/511181734)
@@ -264,14 +266,35 @@
 
 * 其它
 
-  这里只做介绍，因为有些技术我没用过。
-
   * 压缩js文件
 
-    在部署的时候开始gzip或者brotli压缩（没使用过）
+    `“在部署的时候开始gzip或者brotli压缩”`
 
+    这里使用的是nginx 开启gzip压缩的实验，brotli没有实验
+
+    在nginx配置文件中添加以下内容
+
+    ```
+    gzip  on;
+    gzip_min_length  1k;
+    gzip_buffers     4 16k;
+    gzip_http_version 1.1;
+    gzip_comp_level 9;
+    gzip_types       text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php application/javascript application/json;
+    gzip_disable "MSIE [1-6]\.";
+    gzip_vary on;
+    ```
+  
+    然后重启一下服务器。
+  
+    ![企业微信截图_16557126479143](./doc_images/企业微信截图_16557126479143.png)
+  
+    这里的文件已经压缩到300多kb，同时，由于开启了gzip压缩，`Response Headers`中会多一行内容。
+  
+    ![image-20220620161555885](./doc_images/image-20220620161555885.png)
+  
   * 修改index.html文件，添加loading效果
-
+  
     ```html
     <!DOCTYPE html>
     <html>
@@ -332,9 +355,9 @@
     </body>
     </html>
     ```
-
+  
     我这个用的多，使用的时候把web下index.html文件下所有文件替换为这个即可。
-
+  
   ### 总结
-
+  
   ​		基本上打包优化就是这些内容，还有一些[渲染相关](https://zhuanlan.zhihu.com/p/511181734)的内容，因为涉及到大量源码阅读，所以不多做介绍了。
