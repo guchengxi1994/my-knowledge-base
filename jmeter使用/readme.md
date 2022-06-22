@@ -363,7 +363,7 @@ jmeter支持多种断言形式，我们这里用json断言做个演示，这里�
 
 再测试一下。
 
-![image-20220622102907071](C:\Users\xiaoshuyui\AppData\Roaming\Typora\typora-user-images\image-20220622102907071.png)
+![image-20220622102907071](./images/image-20220622102907071.png)
 
 通过了。
 
