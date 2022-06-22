@@ -55,6 +55,7 @@ async def new_user(u: NewUserReq):
 @app.post("/changeage")
 async def change_age(c: ChangeAgeReq):
     try:
+        print(c.user_id)
         p: Person = Person.get(user_id=c.user_id)
         print(p.user_name)
         p.age = c.age
