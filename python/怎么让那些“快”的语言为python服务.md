@@ -177,3 +177,6 @@ print(ctypes.string_at(res))
 
 [**点击查看完整代码**](../pkgs/go2py_sm/readme.md)
 
+
+## others
+* [多线程下使用string_at会出现core dump的问题](https://stackoverflow.com/questions/37953055/segmentation-fault-when-using-ctypes-and-threading)
